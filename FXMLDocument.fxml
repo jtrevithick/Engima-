@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trevithickp5.FXMLDocumentController">
+    <children>
+      <MenuBar prefHeight="41.0" prefWidth="493.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#MenuSaveAction" text="Save File" />
+                  <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#MenuOpenAction" text="Open File" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem fx:id="aboutEnigma" mnemonicParsing="false" onAction="#AboutEnigmaClicked" text="About Enigma" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="33.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Enigma and Decoding Machine!" wrappingWidth="433.57373046875">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Text>
+      <Text layoutY="104.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Encode, Enter your message in the Text Box below&#10;Select Enter a Key or Enigma-Generated Key.&#10;then press the Encode button below.&#10;Select File &gt; Save File to save your message to a file. " wrappingWidth="290.57373046875">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="300.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Decode, Select File &gt;Open File&#10;then browse to your file to read the coded&#10;message.&#10;Press the Decode button below" wrappingWidth="192.57373046875">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="rEG" layoutX="14.0" layoutY="171.0" mnemonicParsing="false" selected="true" text="Use an Enigma-Generated Key">
+         <font>
+            <Font size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="keyRadiogroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rKEY" layoutX="14.0" layoutY="212.0" mnemonicParsing="false" text="Enter a Key,1 - 50" toggleGroup="$keyRadiogroup">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </RadioButton>
+      <Text layoutX="113.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;= Secret Message Summary =&gt;" wrappingWidth="290.57373046875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonEncode" layoutX="63.0" layoutY="299.0" mnemonicParsing="false" onAction="#buttonEncodeOnAction" text="ENCODE" />
+      <Button fx:id="buttonDecode" layoutX="318.0" layoutY="235.0" mnemonicParsing="false" onAction="#buttonDecodeOnAction" text="DECODE" />
+      <Button fx:id="buttonClear" layoutX="318.0" layoutY="299.0" mnemonicParsing="false" onAction="#buttonClearAction" text="CLEAR" />
+      <TextField fx:id="tKey" layoutX="12.0" layoutY="235.0" prefHeight="31.0" prefWidth="246.0" />
+      <Text layoutX="58.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message:" wrappingWidth="55.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="23.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coded Message:" wrappingWidth="97.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="88.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key:" wrappingWidth="28.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tMess" layoutX="119.0" layoutY="377.0" prefHeight="31.0" prefWidth="368.0" />
+      <TextArea fx:id="taCMess" editable="false" layoutX="120.0" layoutY="417.0" prefHeight="24.0" prefWidth="368.0" />
+      <TextArea fx:id="taKey" editable="false" layoutX="119.0" layoutY="465.0" prefHeight="20.0" prefWidth="368.0" />
+      <Group id="keyRadioGroup" layoutX="214.0" layoutY="188.0" />
+      <Text layoutX="51.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Programmer: James Trevithick  Program:TrevithickP5" wrappingWidth="290.57373046875">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
